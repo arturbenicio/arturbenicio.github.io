@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="div"></div>
+	<img src="">
+	<script>;
+		function getLocation()
+		  {
+		  if (navigator.geolocation){
+			    navigator.geolocation.getCurrentPosition(showPosition);
+		  }
+		  else{
+		  	document.querySelector("div").innerHTML = "Geolocation is not supported by this browser.";}
+		  }
+		function showPosition(position)
+		  {
+		  	var attr = "";
+		  	attr = "http://maps.googleapis.com/maps/api/staticmap?center=" + position.coords.latitude + "," + position.coord.longitude + "&zoom=11&size=200x200&sensor=false";
+		  	document.querySeletor("img").setAttribute("src",attr); 
+		  }
+</script>
+	
+</body>
+</html>
